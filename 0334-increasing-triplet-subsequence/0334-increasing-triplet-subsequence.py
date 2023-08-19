@@ -2,9 +2,7 @@ class Solution:
     def increasingTriplet(self, nums: List[int]) -> bool:
         
         result = False
-        #first = nums[0]
-        #second = nums[1]
-        
+
         first = second = float('inf') 
         
         for i in range(0, len(nums)):
@@ -13,11 +11,7 @@ class Solution:
             elif second >= nums[i]:
                 second = nums[i]
             else:
-                #if first < second and second < nums[i]:
                 result = True
-                
-            print(first, second, nums[i])
-            print(result)
         return result
             
         
