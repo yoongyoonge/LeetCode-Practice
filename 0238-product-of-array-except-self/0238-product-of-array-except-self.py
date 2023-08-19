@@ -2,7 +2,7 @@ class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         
         # 예제 1
-        
+        """
         n = len(nums)
         left_product = [1] * n # initialize left_product array with 1
         right_product = [1] * n # initialize right_product array with 1
@@ -22,7 +22,7 @@ class Solution:
         result = [left_product[i] * right_product[i] for i in range(n)]
         #print(result)
         return result
-        
+        """
         
         # 예제 2
         """
@@ -38,6 +38,21 @@ class Solution:
         return(sol)
         """
         
+        # 알고리즘 공부 완료
+        len_num = len(nums)
+        prefix_list = [1]*(len_num+1)
+        post_list = [1]*(len_num+1)
+        
+        prefix_list[0] = nums[0]
+        for i in range(1, len_num):
+            prefix_list[i] = prefix_list[i-1]*nums[i]
+        
+        post_list[len_num-1] = nums[len_num-1]
+        for i in range(len_num-2, -1, -1):
+            post_list[i] = post_list[i+1]*nums[i]
+            
+        result = [prefix_list[i-1]*post_list[i+1] for i in range(len_num)]
+        return result
         
         # Time Limit Exceeded, 내 풀이
         """
