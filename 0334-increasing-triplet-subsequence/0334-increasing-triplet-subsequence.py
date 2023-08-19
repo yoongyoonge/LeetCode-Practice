@@ -3,7 +3,7 @@ class Solution:
         
         result = False
 
-        first = second = float('inf') # 처음을 무한으로 지정해버리면 
+        first = second = float('inf') # 키포인트
         
         for i in range(0, len(nums)):
             if first >= nums[i]:
