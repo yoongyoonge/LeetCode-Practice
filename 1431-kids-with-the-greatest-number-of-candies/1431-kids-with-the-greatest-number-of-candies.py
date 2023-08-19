@@ -9,7 +9,23 @@ class Solution:
                 result.append(0)
             else:
                 result.append(1)
+                
+                
+        ### 다른 풀이 1
+        """
+        maxCandies = max(candies)
+	    result = []
+	    for i in range(len(candies)):            
+	    	result.append(candies[i]+extraCandies >= maxCandies)            
+	    return result
+        """
 
+
+        ### 다른 풀이 2
+        """
+	    maxCandies = max(candies)
+	    return [candy+extraCandies >= maxCandies for candy in candies]
+        """
                 
         return result
             
