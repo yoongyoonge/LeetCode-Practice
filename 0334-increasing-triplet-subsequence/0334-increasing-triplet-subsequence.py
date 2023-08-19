@@ -3,7 +3,7 @@ class Solution:
         
         result = False
 
-        first = second = float('inf') 
+        first = second = float('inf') # 처음을 무한으로 지정해버리면 
         
         for i in range(0, len(nums)):
             if first >= nums[i]:
@@ -12,6 +12,9 @@ class Solution:
                 second = nums[i]
             else:
                 result = True
+                
+            print(first, second, nums[i])
+            print(result)
         return result
             
         
