@@ -12,9 +12,7 @@ class Solution:
                 second = nums[i]
             else:
                 result = True
-                
-            print(first, second, nums[i])
-            print(result)
+
         return result
             
         
