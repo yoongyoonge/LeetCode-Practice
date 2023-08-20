@@ -10,4 +10,13 @@ class Solution:
             if i == (len(nums) - 1):
                 return -1
                     
-                
+        # 예제 1
+        """
+        leftSum, rightSum = 0, sum(nums)
+        for idx, ele in enumerate(nums):
+            rightSum -= ele
+            if leftSum == rightSum:
+                return idx      
+            leftSum += ele
+        return -1       
+        """
