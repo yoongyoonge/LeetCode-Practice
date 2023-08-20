@@ -24,5 +24,6 @@ class Solution:
         
         # 예제 2
         """
+        from itertools import accumulate 
         return max(accumulate(gain, initial=0))
         """
