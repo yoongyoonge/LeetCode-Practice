@@ -9,3 +9,20 @@ class Solution:
         #print(altitudes)
         
         return max(altitudes)
+    
+        # 예제 1
+        """
+        maxAltitude = 0
+        currentAltitude = 0
+        
+        for g in gain:
+            currentAltitude += g
+            maxAltitude = max(maxAltitude, currentAltitude)
+        
+        return maxAltitude
+        """
+        
+        # 예제 2
+        """
+        return max(accumulate(gain, initial=0))
+        """
