@@ -5,4 +5,4 @@
 
 SELECT name
 FROM Customer
-WHERE COALESCE(referee_id,0) <> 2;
+WHERE COALESCE(referee_id,0) <> 2; -- 수행시간 측면에서 이게 더 좋음
