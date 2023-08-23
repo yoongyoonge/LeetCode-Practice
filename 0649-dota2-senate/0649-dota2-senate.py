@@ -1,6 +1,8 @@
 class Solution:
     def predictPartyVictory(self, senate: str) -> str:
         
+        # 아이디어 참고 : https://leetcode.com/problems/dota2-senate/discuss/3483399/Simple-Diagram-Explanation
+        
         rad_queue = []
         dir_queue = []
         
