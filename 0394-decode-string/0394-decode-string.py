@@ -10,7 +10,7 @@ class Solution:
             #print(i)
             
             if i.isdigit():
-                cur_num = cur_num*10 + int(i)
+                cur_num = cur_num*10 + int(i) # 두 자리 이상 숫자를 확인하는 데 유용
             elif i == "[":
                 tmp_stack.append(cur_string)
                 tmp_stack.append(cur_num)
