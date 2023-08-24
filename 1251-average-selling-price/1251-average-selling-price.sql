@@ -16,5 +16,5 @@ FROM Prices as a
 JOIN UnitsSold as b
 ON a.product_id=b.product_id AND (b.purchase_date BETWEEN a.start_date AND a.end_date)
 GROUP BY product_id;
--- 예제의 런타임이 더 성능이 좋음
+-- 예제의 런타임이 더 성능이 좋은 줄 알았는데 아님... 그냥 다른 풀이라고 생각
 -- 다른점은 on 조건에서 between을 사용한 것
