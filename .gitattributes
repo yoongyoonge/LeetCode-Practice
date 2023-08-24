@@ -1,3 +1,0 @@
-* linguist-vendored
-*.sql linguist-vendored=false
-*.py linguist-vendored=false
