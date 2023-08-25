@@ -8,3 +8,13 @@ where num in (
     group by num
     having count(*) = 1
 )
+
+/* -- 이런 풀이도 있다
+select(
+  select num
+  from number
+  group by num
+  having count(*) = 1
+  order by num desc limit 1
+) as num;
+*/
