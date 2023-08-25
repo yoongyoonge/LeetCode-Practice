@@ -15,4 +15,7 @@ class Solution:
             
             return dfs(root.left) + dfs(root.right)
         
+        #print(dfs(root1))
+        #print(dfs(root2))
+        
         return dfs(root1) == dfs(root2)
