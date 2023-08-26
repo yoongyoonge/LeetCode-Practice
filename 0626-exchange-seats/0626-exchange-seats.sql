@@ -23,3 +23,25 @@ inner join (
 ) s
 on i.switch_id = s.id
 order by i.id
+
+# 예제 1
+/* -- id 를 조작
+SELECT
+	CASE
+		WHEN seat.id % 2 <> 0 AND seat.id = (SELECT COUNT(*) FROM seat) THEN seat.id
+		WHEN seat.id % 2 = 0 THEN seat.id - 1
+		ELSE
+			seat.id + 1
+	END as id,
+	student 
+FROM seat
+ORDER BY id
+;
+*/
+
+# 예제 2
+/*
+SELECT ROW_NUMBER() OVER() id, student
+FROM seat
+ORDER BY IF(MOD(id, 2) = 0, id-1, id+1)
+*/
