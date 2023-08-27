@@ -29,7 +29,7 @@ from (
     from (
         select 
             movie_id
-            , avg(rating) as rate_avg
+            , avg(rating) as rate_avg -- 문제 조건 놓침
         from MovieRating
         where created_at like "2020-02%"
         group by movie_id
