@@ -56,7 +56,7 @@ WITH day AS(
 SELECT d1.visited_on, SUM(d2.amount) as amount, ROUND(SUM(d2.amount)/7,2) as average_amount
 FROM day d1
 JOIN day d2
-ON  DATEDIFF(d1.visited_on,d2.visited_on) <= 6 AND DATEDIFF(d1.visited_on,d2.visited_on) >= 0
+ON  DATEDIFF(d1.visited_on,d2.visited_on) <= 6 AND DATEDIFF(d1.visited_on,d2.visited_on) >= 0 -- 생각한 부분과 차이는 이 부분, 셀프 조인을 해서 값을 뽑으면 됨
 WHERE d1.visited_on  >= (SELECT MIN(visited_on) FROM day) + 6
 GROUP BY d1.visited_on
 ORDER BY d1.visited_on
