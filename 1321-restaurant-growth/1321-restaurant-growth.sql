@@ -47,7 +47,7 @@ ORDER BY visited_on
 OFFSET 6 ROWS  -- Mysql server sql
 */
 
-# 예제 3
+# 예제 3 -- 이 코드 참고 필요
 WITH day AS(
     SELECT visited_on, SUM(amount) AS amount
     FROM Customer
