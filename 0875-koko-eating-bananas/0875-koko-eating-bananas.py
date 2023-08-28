@@ -12,7 +12,7 @@ class Solution:
                 k += 1
             else:
                 return k
-        '''
+        ''' # 시간 제한 초과
     
   
         # 예제 2
