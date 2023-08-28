@@ -30,3 +30,17 @@ class Solution:
             else:
                 left = mid + 1 # answer must lie to the right half (exclusive of current value ie mid)
         return right
+    
+    
+    
+        # 예제 3
+        '''
+        l,r=1,max(piles)
+        while l<r:
+            mid,t=(l+r)//2,0
+            for i in piles: t+=(i+mid-1)//mid
+            print(t,mid,end=" ")
+            if t<=h:r=mid
+            else:l=mid+1
+        return l 
+        '''
