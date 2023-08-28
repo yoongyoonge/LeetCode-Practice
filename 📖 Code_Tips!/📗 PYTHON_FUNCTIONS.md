@@ -263,3 +263,8 @@ print(ex_02.isdigit()) # 기호가 포함되여 False
 print(ex_03.isdigit()) # 문자가 포함되어 False
 print(ex_04.isdigit()) # 공백이 포함되어 False
 ```
+
+### 11. '/' vs '//'
+- / 는 나눗셈 >>> 3/5 : 0.6
+- // 는 몫을 구하는 연산자 >>> 10//3 : 3
+
