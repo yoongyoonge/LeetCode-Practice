@@ -19,7 +19,7 @@ class Solution:
                 res += roman_dict[cur]
             else:
                 if pre < roman_dict[cur]:
-                    res += (roman_dict[cur]-2*pre)
+                    res += (roman_dict[cur]-2*pre) # 예제를 보니 굳이 이렇게 안해도 되겠구나 뒷 문자가 더 크면 그냥 답에서 빼주면 된다.
                 else:
                     res += roman_dict[cur]
 
@@ -28,3 +28,19 @@ class Solution:
             
         
         return res
+
+
+        # 예제 1
+        '''
+        m = roman_dict
+
+        ans = 0
+
+        for i in range(len(s)):
+            if i < len(s) - 1 and m[s[i]] < m[s[i+1]]:
+                ans -= m[s[i]]
+            else:
+                ans += m[s[i]]
+
+        return ans
+        '''
