@@ -10,4 +10,10 @@ class Solution:
                 return key
 
 
-        
+        # 예제 1
+        '''
+        nums.sort()
+        n = len(nums)
+
+        return nums[n//2]
+        '''
